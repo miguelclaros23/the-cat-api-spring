@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface BreedsHttpClient {
 
     @GetMapping("breeds/{breedId}")
-    BreedsResponse getBreedById(@PathVariable final String breedId);
+    BreedsModel getBreedById(@PathVariable final String breedId);
 
     @GetMapping("breeds?limit=100&page=0")
-    BreedsModel getBreedsAll();
+    BreedsResponse getBreedsAll();
 
     @GetMapping("images/search/?breed_ids={breedId}&limit={limit}&page={page}")
     BreedsResponse getBreedByFilter(@PathVariable final String breedId,

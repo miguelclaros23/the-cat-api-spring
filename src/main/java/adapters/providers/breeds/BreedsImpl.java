@@ -15,8 +15,8 @@ public class BreedsImpl implements BreedsHttpClient {
      * @return
      */
     @Override
-    public BreedsResponse getBreedById(String breedId) {
-        BreedsResponse breedsResponse = breedsHttpClient.getBreedById(breedId);
+    public BreedsModel getBreedById(String breedId) {
+        BreedsModel breedsResponse = breedsHttpClient.getBreedById(breedId);
         if(breedsResponse == null) {
             throw new BreedsException("Unable to get Breed information");
         }
@@ -27,8 +27,8 @@ public class BreedsImpl implements BreedsHttpClient {
      * @return
      */
     @Override
-    public BreedsModel getBreedsAll() {
-        BreedsModel breedsResponse = breedsHttpClient.getBreedsAll();
+    public BreedsResponse getBreedsAll() {
+        BreedsResponse breedsResponse = breedsHttpClient.getBreedsAll();
         if(breedsResponse == null) {
             throw new BreedsException("Unable to get Breeds information all");
         }
